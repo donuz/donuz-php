@@ -1,0 +1,30 @@
+{
+  "name": "donuz/donuz-php",
+  "description": "Donuz API - Biblioteca para PHP",
+  "homepage": "https://www.donuz.co",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "type": "library",
+  "keywords": [
+    "donuz",
+    "programa de fidelidade",
+    "biblioteca php",
+    "api"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Donuz Developer Team",
+      "homepage": "https://www.donuz.co"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.9",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Donuz\\": "Donuz/"
+    }
+  }
+}
