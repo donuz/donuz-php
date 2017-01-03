@@ -45,13 +45,11 @@ class Premio
     }
 
     /**
-     * @param      $idPremio
-     * @param null $order
-     * @param null $limit
+     * @param $idPremio
      *
      * @return mixed
      */
-    public function getInfoReward($idPremio, $order = null, $limit = null)
+    public function getInfoReward($idPremio)
     {
         return Curl::get('premio/' . Curl::$estabelecimento_id . '/' . $idPremio, ['Token: ' . Curl::$token, 'Order: ' . $order, 'Limit: ' . $limit]);
     }

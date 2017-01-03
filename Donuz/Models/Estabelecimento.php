@@ -6,12 +6,10 @@ use Donuz\Curl;
 class Estabelecimento
 {
     /**
-     * @param $EstabelecimentoID
-     *
      * @return mixed
      */
-    public function getInfoStore($EstabelecimentoID)
+    public function getInfoStore()
     {
-        return Curl::get('estabelecimento/' . $EstabelecimentoID, ['Token: ' . Curl::$token]);
+        return Curl::get('estabelecimento/' . Curl::$estabelecimento_id, ['Token: ' . Curl::$token]);
     }
 }
