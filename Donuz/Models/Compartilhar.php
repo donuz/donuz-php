@@ -14,6 +14,6 @@ class Compartilhar
     {
         $data = ['acao' => 'inserir', 'estabelecimento' => Curl::$estabelecimento_id, 'termo' => 'config'];
 
-        return Curl::post('redessociais', ['Token: ' . Curl::$token, '$token-Cliente: ' . $tokenCliente], $data);
+        return Curl::post('redessociais', ['Token: ' . Curl::$token, 'Token-Cliente: ' . $tokenCliente], $data);
     }
 }

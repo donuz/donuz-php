@@ -25,6 +25,6 @@ class CodigoPontuavel
     {
         $data = array_merge(['acao' => 'inserir', 'estabelecimento' => Curl::$estabelecimento_id], $data);
 
-        return Curl::post('codigoPontuavel', ['Token: ' . Curl::$token, '$token-Cliente:' . $tokenCliente], $data);
+        return Curl::post('codigoPontuavel', ['Token: ' . Curl::$token, 'Token-Cliente:' . $tokenCliente], $data);
     }
 }

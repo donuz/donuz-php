@@ -20,7 +20,7 @@ class Resgate
 
         return Curl::post('resgate', [
             'Token: ' . Curl::$token,
-            '$token-Cliente: ' . $tokenCliente
+            'Token-Cliente: ' . $tokenCliente
         ], $data);
     }
 
@@ -34,7 +34,7 @@ class Resgate
     {
         return Curl::get('resgate/' . Curl::$estabelecimento_id . '/' . $idResgate, [
             'Token: ' . Curl::$token,
-            '$token-Cliente: ' . $tokenCliente
+            'Token-Cliente: ' . $tokenCliente
         ]);
     }
 
@@ -47,7 +47,7 @@ class Resgate
     {
         return Curl::get('resgate/' . Curl::$estabelecimento_id, [
             'Token: ' . Curl::$token,
-            '$token-Cliente: ' . $tokenCliente
+            'Token-Cliente: ' . $tokenCliente
         ]);
     }
 }

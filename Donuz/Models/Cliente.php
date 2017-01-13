@@ -20,12 +20,13 @@ class Cliente
 
     /**
      * @param $tokenCliente
+     * @param $cpfCliente
      *
      * @return mixed
      */
-    public function getInfoCustomer($tokenCliente)
+    public function getInfoCustomer($tokenCliente, $cpfCliente)
     {
-        return Curl::get('cliente/' . Curl::$estabelecimento_id, ['Token: ' . Curl::$token, '$token-Cliente: ' . $tokenCliente]);
+        return Curl::get('cliente/' . Curl::$estabelecimento_id . '/' . $cpfCliente, ['Token: ' . Curl::$token, 'Token-Cliente: ' . $tokenCliente]);
     }
 
     /**
@@ -50,7 +51,7 @@ class Cliente
     {
         $data = array_merge(['acao' => 'inserir', 'estabelecimento' => Curl::$estabelecimento_id], $data);
 
-        return Curl::post('cliente', ['Token: ' . Curl::$token, '$token-Cliente: ' . $tokenCliente], $data);
+        return Curl::post('cliente', ['Token: ' . Curl::$token, 'Token-Cliente: ' . $tokenCliente], $data);
     }
 
     /**

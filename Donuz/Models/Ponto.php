@@ -12,6 +12,6 @@ class Ponto
      */
     public function getPointsExtract($tokenCliente)
     {
-        return Curl::get('ponto/' . Curl::$estabelecimento_id, ['Token: ' . Curl::$token, '$token-Cliente: ' . $tokenCliente]);
+        return Curl::get('ponto/' . Curl::$estabelecimento_id, ['Token: ' . Curl::$token, 'Token-Cliente: ' . $tokenCliente]);
     }
 }

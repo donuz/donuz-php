@@ -14,7 +14,7 @@ class Saldo
     {
         return Curl::get('saldo/' . Curl::$estabelecimento_id, [
             'Token: ' . Curl::$token,
-            '$token-Cliente: ' . $tokenCliente
+            'Token-Cliente: ' . $tokenCliente
         ]);
     }
 }
