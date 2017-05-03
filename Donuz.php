@@ -66,4 +66,9 @@ class Donuz
     {
         return new \Donuz\Models\Saldo();
     }
+
+    public static function voucher()
+    {
+        return new \Donuz\Models\Voucher();
+    }
 }
