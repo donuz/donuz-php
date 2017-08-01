@@ -42,6 +42,19 @@ class Cliente
     }
 
     /**
+     * @param $login
+     * @param $password
+     *
+     * @return mixed
+     */
+    public function signInByEmail($login)
+    {
+        $data = ['acao' => 'logarOnlyEmail', 'estabelecimento' => Curl::$estabelecimento_id, 'login' => $login];
+
+        return Curl::post('login', ['Token: ' . Curl::$token], $data);
+    }
+
+    /**
      * @param $data
      * @param $tokenCliente
      *
@@ -49,7 +62,7 @@ class Cliente
      */
     public function updateCustomer($data, $tokenCliente)
     {
-        $data = array_merge(['acao' => 'inserir', 'estabelecimento' => Curl::$estabelecimento_id], $data);
+        $data = array_merge(['acao' => 'editar', 'estabelecimento' => Curl::$estabelecimento_id], $data);
 
         return Curl::post('cliente', ['Token: ' . Curl::$token, 'Token-Cliente: ' . $tokenCliente], $data);
     }
