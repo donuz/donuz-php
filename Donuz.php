@@ -71,4 +71,8 @@ class Donuz
     {
         return new \Donuz\Models\Voucher();
     }
+    public static function gifts()
+    {
+        return new \Donuz\Models\Presentes();
+    }
 }
